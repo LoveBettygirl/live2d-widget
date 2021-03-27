@@ -182,7 +182,6 @@ function loadWidget(config) {
 			.then(response => response.json())
 			.then(result => {
 				window.addEventListener("mouseover", event => {
-					console.log(event.target);
 					for (let { selector, text } of result.mouseover) {
 						if (!event.target.matches(selector)) continue;
 						text = randomSelection(text);
